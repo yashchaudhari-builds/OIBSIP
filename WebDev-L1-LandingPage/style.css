@@ -310,17 +310,320 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+
   .navbar {
-    flex-direction: column;
+    padding: 15px 25px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .navbar nav a {
+    margin: 8px;
+    font-size: 16px;
+  }
+
+  .hero {
+    min-height: 90vh;
   }
 
   .hero h1 {
-    font-size: 32px;
+    font-size: 42px;
   }
 
-  .about {
+  .hero p {
+    font-size: 17px;
+  }
+
+  .product {
+    padding: 50px 5%;
+  }
+
+  .product-container {
+    gap: 20px;
+  }
+
+  .product-card {
+    width: 220px;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 12px 15px;
     flex-direction: column;
-    text-align: center;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .logo-icon-bg {
+    width: 34px;
+    height: 34px;
+  }
+
+  .navbar nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+  }
+
+  .navbar nav a {
+    margin: 3px 5px;
+    font-size: 14px;
+  }
+
+
+  /* HERO */
+  .hero {
+    min-height: 80vh;
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hero button {
+    padding: 11px 22px;
+    font-size: 15px;
+  }
+
+
+  /* FEATURES */
+  .features {
+    padding: 50px 20px;
+  }
+
+  .features h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .feature-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+
+  /* ABOUT */
+  .about {
+    padding: 60px 20px;
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .about h2 {
+    font-size: 30px;
+  }
+
+  .about p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .about-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .about-features span {
+    width: 100%;
+    max-width: 250px;
+  }
+
+
+  /* PRODUCTS */
+  .product {
+    padding: 50px 20px;
+  }
+
+  .product h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .product-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 25px;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .product-card img {
+    height: 220px;
+  }
+
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 50px 20px;
+  }
+
+  .testimonials h2 {
+    font-size: 28px;
+  }
+
+  .reviews {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+
+  /* CONTACT */
+  .contact {
+    padding: 50px 20px;
+  }
+
+  .contact h2 {
+    font-size: 30px;
+  }
+
+  .contact-sub {
+    font-size: 15px;
+  }
+
+  .contact-container {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .contact-1 {
+    width: 100%;
+    max-width: 350px;
+    line-height: 1.6;
+  }
+
+
+  /* FOOTER */
+  .footer {
+    padding: 25px 15px;
+  }
+
+  .footer p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .footer .socials {
+    margin-top: 12px;
+  }
+
+  .footer .socials a {
+    margin: 0 6px;
+    font-size: 14px;
+  }
+}
+
+
+/* Small phones */
+@media (max-width: 400px) {
+
+  .navbar {
+    padding: 10px 10px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .logo-icon-bg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar nav {
+    gap: 2px 4px;
+  }
+
+  .navbar nav a {
+    font-size: 12px;
+    margin: 2px 3px;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .features h2,
+  .product h2,
+  .testimonials h2 {
+    font-size: 25px;
+  }
+
+  .about h2 {
+    font-size: 27px;
+  }
+
+  .product-card {
+    max-width: 290px;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .contact h2 {
+    font-size: 27px;
   }
 }
