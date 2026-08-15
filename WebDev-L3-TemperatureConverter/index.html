@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Temperature Lab</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-blur"></div>
+
+<div class="container">
+    <h1>🌡 Smart Temperature Lab</h1>
+    <p class="subtitle">Real-time temperature conversion tool</p>
+
+    <div class="input-box">
+        <input type="number" id="tempInput" placeholder="Enter temperature">
+        
+        <select id="unit">
+            <option value="c">°C</option>
+            <option value="f">°F</option>
+            <option value="k">K</option>
+        </select>
+    </div>
+
+    <div class="temp-bar">
+        <div id="tempIndicator"></div>
+    </div>
+
+    <p id="error"></p>
+
+    <div class="results">
+        <div class="card">
+            <span>Celsius</span>
+            <h2 id="celsius">--</h2>
+        </div>
+        <div class="card">
+            <span>Fahrenheit</span>
+            <h2 id="fahrenheit">--</h2>
+        </div>
+        <div class="card">
+            <span>Kelvin</span>
+            <h2 id="kelvin">--</h2>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

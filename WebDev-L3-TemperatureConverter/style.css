@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: #e5e7eb;
+}
+
+/* Background glow */
+.bg-blur {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, #3b82f6, #9333ea);
+    filter: blur(120px);
+    z-index: -1;
+}
+
+/* Main container */
+.container {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+/* Input */
+.input-box {
+    display: flex;
+    gap: 10px;
+}
+
+input,
+select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: 0.3s;
+}
+
+input:focus,
+select:focus {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Fix select option visibility */
+select option {
+    background: #0f172a;
+    color: white;
+}
+
+/* Temperature bar */
+.temp-bar {
+    height: 8px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+#tempIndicator {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(to right, blue, cyan, yellow, red);
+    transition: 0.4s;
+}
+
+/* Error */
+#error {
+    color: #f87171;
+    text-align: center;
+    font-size: 14px;
+    min-height: 20px;
+}
+
+/* Results */
+.results {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card span {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.card h2 {
+    margin-top: 5px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        padding: 20px 15px;
+        border-radius: 16px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .input-box {
+        gap: 7px;
+    }
+
+    input,
+    select {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card span {
+        font-size: 12px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .bg-blur {
+        width: 250px;
+        height: 250px;
+        filter: blur(90px);
+    }
+}
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 320px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .container {
+        padding: 18px 12px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .input-box {
+        flex-direction: column;
+    }
+
+    input,
+    select {
+        padding: 10px;
+    }
+
+    .temp-bar {
+        margin: 12px 0;
+    }
+}
