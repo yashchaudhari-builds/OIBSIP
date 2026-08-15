@@ -1,0 +1,326 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.invert{
+    filter: invert(1);
+}
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #111;
+  color: #fff;
+  z-index: 1000;
+}
+ 
+/* Update Logo alignment */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon background and text */
+    font-size: 20px; /* Make brand name slightly larger */
+    font-weight: bold;
+}
+
+/* Background container for the icon */
+.logo-icon-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f39c12; /* Matches your accent gold color */
+    width: 36px; /* Container width */
+    height: 36px; /* Container height */
+    border-radius: 50%; /* Makes the background circular */
+    padding: 6px; /* Internal spacing around image */
+}
+
+/* Icon image control */
+.logo-icon-bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* If your icon is black, invert makes it white to stand out */
+    filter: invert(1); 
+}
+
+.navbar nav a {
+  color: #fff;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar nav a:hover {
+  color: #f39c12;
+}
+
+/* hero */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)),
+              url('images/bgimg.jpg') no-repeat center/cover ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  padding: 12px 25px;
+  border: none;
+  background: #f39c12;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero button:hover {
+  background: #e67e22;
+}
+
+/* Features */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.feature-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* product */
+.product {
+  padding: 60px 10%;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.product h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  width: 250px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.product-card button {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #f39c12;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-card button:hover {
+  background: #e67e22;
+}
+
+/* About Section - Centered */
+.about {
+  padding: 80px 20px;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 700px;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Feature highlights */
+.about-features {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.about-features span {
+  background: #f4f4f4;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Button */
+.about-btn {
+  padding: 12px 25px;
+  border: none;
+  background: #f39c12;
+  color: #fff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #e67e22;
+}
+
+/* Testimonials */
+.testimonials {
+  background: #111;
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials h2{
+     margin-bottom: 10px;
+    padding-bottom: 30px;
+}
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+  background: #f4f4f4;
+  text-align: center;
+  background-color: rgb(28, 28, 28);
+  color: white;
+}
+
+.contact h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.contact-sub {
+  color: #666;
+  margin-bottom: 40px;
+  color: rgb(238, 195, 195);
+}
+
+/* Container */
+.contact-container {
+  display: flex;
+  flex-direction: column; /* 🔥 THIS makes it vertical */
+  align-items: center;    /* center horizontally */
+  gap: 20px;
+}
+
+/* Footer */
+.footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer .socials a {
+  color: #f39c12;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+}
